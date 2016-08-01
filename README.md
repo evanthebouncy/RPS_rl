@@ -1,4 +1,4 @@
-# A SIMPLE REINFORCEMENT LEARNING AGENT FOR ROCK PAPER SISSORS
+# A SIMPLE RL AGENT FOR ROCK PAPER SISSORS
 
 A simple personal project to brush up RL using rock paper sissor playing
 
