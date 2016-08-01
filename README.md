@@ -1,27 +1,26 @@
-## A SIMPLE REINFORCEMENT LEARNING AGENT FOR ROCK PAPER SISSORS ##
+# A SIMPLE REINFORCEMENT LEARNING AGENT FOR ROCK PAPER SISSORS
 
 A simple personal project to brush up RL using rock paper sissor playing
 
-# States
+## States
 
-We consider the simple state of the past 2 exchanges, i.e. [(R,P), (P,S)] are two past exchanges
-where player 1 threw Rock then Paper, while player 2 threw Paper and Sissor.
+We consider the simple state of the past 1 exchanges, i.e. [(R,P)] are past exchange
+where player 1 threw Rock, while player 2 threw Paper
 
-There are 3^4 = 81 total states
 
-# Actions
+## Actions
 
 An action is either R or P or S
 
-# Q values
+## Q Table
 
-A table of Q values is stored for every state-action pair, estimating its values.
+The state , action pairs are stored in a dictionary, all values initialized to 0.0
 
-i.e. ([(R,P), (P,S)], R) is the Q value for a particular past 2 throws, and throwing Rock in the
-current state.
+## Q learning
 
-all Q values initialized to 1 / 3 then improved
+The standard bellman update was applied: 
 
-# Q learning
+The new Q value for a state/value pair is the current reward (win / lose) plus the discounted best future reward (argmaxing the action)
 
+this new Q value is diffed with the old Q value, and a small fraction of it is updated to the Q value
 
